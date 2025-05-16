@@ -1,0 +1,32 @@
+body{
+ background-color: black;
+}
+
+h3{
+    color: white;
+}
+
+p{
+    color: white;
+}
+
+.center-content {
+  padding: 30px;
+}
+
+.gallery-row {
+  display: flex;
+  gap: 20px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.movie-card {
+  width: 180px;
+  text-align: center;
+}
+
+.movie-card img {
+  width: 100%;
+
+}

@@ -1,0 +1,36 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-content {
+  flex: 1;
+}
+
+
+.footer {
+  background: #141414;
+  color: #fff;
+  padding: 30px 0 10px 0;
+  font-size: small;
+}
+
+a{
+    text-decoration: none;
+    color: grey;
+}
+i{
+    color: grey;
+    margin: 1px;
+}
+
+a:hover{
+    color: white;
+}

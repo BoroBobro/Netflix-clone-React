@@ -1,0 +1,131 @@
+body{
+    margin: 0;
+    width: 100%;
+}
+
+
+.netflix-nav {
+  display: flex;
+  align-items:center;
+  justify-content: space-between;
+  background: #141414;
+  padding: 0 30px;
+  height: 60px;
+}
+
+.nav-left {
+  display: flex;
+  gap: 10px; 
+}
+
+.nav-logo img {
+  height: 20px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  font-size: 14px;
+  gap: 25px;
+  margin-left: 10px; 
+  
+}
+
+
+
+.nav-links li {
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.2s;
+  color: #8d8d8c;
+  font-weight: bold;
+}
+
+.nav-links li:hover {
+  color: #ffffff;
+}
+
+.nav-profile img {
+  height: 32px;
+  border-radius: 4px;
+}
+
+.nav-profile {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.nav-profile .bi-search {
+  color: #fff;
+   font-size: 16px; 
+}
+
+.nav-profile .bi-bell {
+  color: #fff;
+   font-size: 16px;  
+}
+
+.nav-profile .bi-person-circle {
+  color: #fff;
+  font-size: 16px; 
+  margin-left: 15px;
+}
+
+   #kids {
+        color: #f5f5f1;
+        font-size: 0.8em;
+      }
+
+
+
+
+
+@media (max-width: 900px) {
+  .nav-links {
+    gap: 12px;
+    font-size: 13px;
+  }
+  .nav-logo img {
+    height: 16px;
+  }
+}
+
+@media (max-width: 700px) {
+  .netflix-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 10px 15px;
+  }
+  .nav-left {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+  .nav-links {
+    margin-left: 0;
+    gap: 10px;
+    font-size: 12px;
+    flex-wrap: wrap;
+  }
+  .nav-profile {
+    margin-top: 8px;
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 500px) {
+  .nav-links {
+    display: none;
+  }
+  .nav-logo img {
+    height: 14px;
+  }
+  .nav-profile {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
