@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./CenterContent.css"
+import { Link } from "react-router-dom";
 
 const sagas = [
     {
@@ -13,7 +14,8 @@ const sagas = [
     {
         name:"Nobody",
         search: "Nobody",
-    }
+        type: "movie"
+    },
 ];
 
 const OMDB_API_KEY = "b1e372aa"
@@ -34,9 +36,10 @@ const CenterContent = () => {
 
 
       const data = await res.json();
+      console.log(data);
       return{
         name: saga.name,
-        movies: data.Search ? data.Search.slice(0,6) : [],
+        movies: data.Search ? data.Search.slice(2,7) : [],
       };
         };
 
@@ -61,7 +64,9 @@ if(loading) return <div className="center-content">Loading...</div>;
           <div className="gallery-row fluid ">
             {gallery.movies.map((movie) => (
               <div className="movie-card" key={movie.imdbID}>
-                <img src={movie.Poster} alt={movie.Title} />
+                <Link to={`/movie-details/${movie.imdbID}`}>
+                  <img src={movie.Poster} alt={movie.Title} />
+                </Link>
                 <p>{movie.Title}</p>
               </div>
             ))}
